@@ -48,5 +48,15 @@ feature 'gerenciar pessoa' do
     page.should have_content 'Email: aniely@mail.com'
     
   end
+    scenario 'excluir pessoa' do #, :javascript => true do
+    pessoa = FactoryGirl.create(:pessoa)
+    visit pessoas_path
+
+    click_link 'Excluir'
+    
+    Pessoa.count.should == 0
+  end
+
+
 end
 

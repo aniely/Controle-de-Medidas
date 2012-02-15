@@ -23,7 +23,7 @@
     <td><%= pessoa.email %></td>
     <td><%= link_to 'Show', pessoa %></td>
     <td><%= link_to 'Edit', edit_pessoa_path(pessoa) %></td>
-    <td><%= link_to 'Excluir', pessoa, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Destroy', pessoa, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
