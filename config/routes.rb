@@ -1,4 +1,6 @@
 ControleDeMedidas::Application.routes.draw do
+  resources :medidas
+
   resources :pessoas
 
   # The priority is based upon order of creation:

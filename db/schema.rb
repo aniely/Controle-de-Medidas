@@ -11,7 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120215143701) do
+ActiveRecord::Schema.define(:version => 20120228132544) do
+
+  create_table "medidas", :force => true do |t|
+    t.string   "peso"
+    t.string   "altura"
+    t.string   "medida"
+    t.integer  "pessoa_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "medidas", ["pessoa_id"], :name => "index_medidas_on_pessoa_id"
 
   create_table "pessoas", :force => true do |t|
     t.string   "nome"

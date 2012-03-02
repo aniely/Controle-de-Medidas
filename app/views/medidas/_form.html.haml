@@ -1,0 +1,6 @@
+= semantic_form_for(@medida) do |f|
+    =f.input :peso, :label => 'Peso'
+    =f.input :altura, :label => 'Altura'
+    =f.input :medida, :label => 'Medida'
+    = f.input :pessoa, :member_label => :nome, :label => 'Nome'
+    = f.submit 'Salvar'

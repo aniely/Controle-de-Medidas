@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Peso:</b>
+  <%= @medida.peso %>
+</p>
+
+<p>
+  <b>Altura:</b>
+  <%= @medida.altura %>
+</p>
+
+<p>
+  <b>Medida:</b>
+  <%= @medida.medida %>
+</p>
+
+<p>
+  <b>Pessoa:</b>
+  <%= @medida.pessoa.nome %>
+</p>
+
+
+<%= link_to 'Edit', edit_medida_path(@medida) %> |
+<%= link_to 'Back', medidas_path %>
