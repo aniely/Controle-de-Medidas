@@ -28,3 +28,7 @@
 
 <%= link_to 'New Medida', new_medida_path %>
 
+
+    <td><%= link_to 'Show', medico %></td>
+    <td><%= link_to 'Edit', edit_medico_path(medico) %></td>
+    <td><%= link_to 'Excluir', medico, confirm: 'Are you sure?', method: :delete %></td>

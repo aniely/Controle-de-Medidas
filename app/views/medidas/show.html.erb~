@@ -16,7 +16,7 @@
 </p>
 
 <p>
-  <b>Pessoa:</b>
+  <b>Nome:</b>
   <%= @medida.pessoa.nome %>
 </p>
 
