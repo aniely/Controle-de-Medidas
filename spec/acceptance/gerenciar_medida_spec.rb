@@ -38,6 +38,16 @@ feature 'gerenciar medida' do
 
   end
 
+    scenario 'Excluir medida' do #, :javascript => true do
+
+    pessoa = FactoryGirl.create(:pessoa,:nome => 'Aniely')
+    medida = FactoryGirl.create(:medida, :pessoa => pessoa)
+
+    visit medidas_path
+    click_link 'Excluir'
+
+  end
+
   def preencher_e_verificar_medida
 
     fill_in 'Peso', :with => '60'
