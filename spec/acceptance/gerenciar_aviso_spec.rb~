@@ -34,7 +34,17 @@ feature 'gerenciar dica' do
     visit edit_aviso_path(aviso)
 
     preencher_e_verificar_aviso
-end
+    end
+    scenario 'excluir dica' do #, :javascript => true do
+
+    pessoa = FactoryGirl.create(:pessoa,:nome => 'Aniely')
+    aviso = FactoryGirl.create(:aviso, :pessoa => pessoa)
+    
+    visit avisos_path
+    click_link 'Excluir'
+
+  end
+
 
     def preencher_e_verificar_aviso
 
