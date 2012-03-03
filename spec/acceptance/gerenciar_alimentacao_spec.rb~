@@ -36,7 +36,16 @@ feature 'gerenciar alimentacao' do
 
   end
   
-   
+    scenario 'excluir alimentacao' do #, :javascript => true do
+
+    pessoa = FactoryGirl.create(:pessoa,:nome => 'Aniely')
+    alimentacao = FactoryGirl.create(:alimentacao, :pessoa => pessoa)
+    
+    visit alimentacaos_path
+    click_link 'Excluir'
+
+  end
+
     def preencher_e_verificar_alimentacao
 
     fill_in 'Calorias', :with => '100'

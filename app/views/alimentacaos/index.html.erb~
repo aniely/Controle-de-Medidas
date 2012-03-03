@@ -17,7 +17,7 @@
     <td><%= alimentacao.pessoa %></td>
     <td><%= link_to 'Show', alimentacao %></td>
     <td><%= link_to 'Edit', edit_alimentacao_path(alimentacao) %></td>
-    <td><%= link_to 'Destroy', alimentacao, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Excluir', alimentacao, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
