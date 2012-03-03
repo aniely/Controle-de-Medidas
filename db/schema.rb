@@ -11,7 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120303121348) do
+ActiveRecord::Schema.define(:version => 20120303130502) do
+
+  create_table "alimentacaos", :force => true do |t|
+    t.string   "calorias"
+    t.string   "tipo"
+    t.integer  "pessoa_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "alimentacaos", ["pessoa_id"], :name => "index_alimentacaos_on_pessoa_id"
 
   create_table "atividadefisicas", :force => true do |t|
     t.string   "nome"

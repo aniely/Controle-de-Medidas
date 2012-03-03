@@ -1,0 +1,5 @@
+= semantic_form_for(@alimentacao) do |f|
+    =f.input :calorias, :label => 'Calorias'
+    =f.input :tipo, :label => 'Tipo'
+    = f.input :pessoa, :member_label => :nome, :label => 'Nome'
+    = f.submit 'Salvar'

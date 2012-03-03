@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Calorias:</b>
+  <%= @alimentacao.calorias %>
+</p>
+
+<p>
+  <b>Tipo:</b>
+  <%= @alimentacao.tipo %>
+</p>
+
+<p>
+  <b>Nome:</b>
+  <%= @alimentacao.pessoa.nome %>
+</p>
+
+
+<%= link_to 'Edit', edit_alimentacao_path(@alimentacao) %> |
+<%= link_to 'Back', alimentacaos_path %>
