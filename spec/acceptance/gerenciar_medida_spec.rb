@@ -42,7 +42,7 @@ feature 'gerenciar medida' do
 
     pessoa = FactoryGirl.create(:pessoa,:nome => 'Aniely')
     medida = FactoryGirl.create(:medida, :pessoa => pessoa)
-
+    
     visit medidas_path
     click_link 'Excluir'
 

@@ -1,4 +1,6 @@
 ControleDeMedidas::Application.routes.draw do
+  resources :atividades
+
   resources :medidas
 
   resources :pessoas

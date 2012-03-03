@@ -1,0 +1,8 @@
+= semantic_form_for(@atividade) do |f|
+    =f.input :nomeat, :label => 'Nomeat'
+    =f.input :tipo, :label => 'Tipo'
+    =f.input :calorias, :label => 'Calorias'
+    =f.input :horas, :label => 'Horas'
+    = f.input :pessoa, :member_label => :nome, :label => 'Nome'
+    = f.submit 'Salvar'
+

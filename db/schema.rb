@@ -11,7 +11,31 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120228132544) do
+ActiveRecord::Schema.define(:version => 20120303121348) do
+
+  create_table "atividadefisicas", :force => true do |t|
+    t.string   "nome"
+    t.string   "tipo"
+    t.string   "calorias"
+    t.string   "horas"
+    t.integer  "pessoa_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "atividadefisicas", ["pessoa_id"], :name => "index_atividadefisicas_on_pessoa_id"
+
+  create_table "atividades", :force => true do |t|
+    t.string   "nomeat"
+    t.string   "tipo"
+    t.string   "calorias"
+    t.string   "horas"
+    t.integer  "pessoa_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "atividades", ["pessoa_id"], :name => "index_atividades_on_pessoa_id"
 
   create_table "medidas", :force => true do |t|
     t.string   "peso"

@@ -1,0 +1,37 @@
+<%= form_for(@atividade) do |f| %>
+  <% if @atividade.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@atividade.errors.count, "error") %> prohibited this atividade from being saved:</h2>
+
+      <ul>
+      <% @atividade.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nomeat %><br />
+    <%= f.text_field :nomeat %>
+  </div>
+  <div class="field">
+    <%= f.label :tipo %><br />
+    <%= f.text_field :tipo %>
+  </div>
+  <div class="field">
+    <%= f.label :calorias %><br />
+    <%= f.text_field :calorias %>
+  </div>
+  <div class="field">
+    <%= f.label :horas %><br />
+    <%= f.text_field :horas %>
+  </div>
+  <div class="field">
+    <%= f.label :pessoa %><br />
+    <%= f.text_field :pessoa %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
