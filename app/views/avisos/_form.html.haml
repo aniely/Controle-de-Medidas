@@ -1,0 +1,6 @@
+= semantic_form_for(@aviso) do |f|
+    =f.input :data, :label => 'Data'
+    =f.input :descricao, :label => 'Descricao'
+    = f.input :pessoa, :member_label => :nome, :label => 'Nome'
+    = f.submit 'Salvar'
+

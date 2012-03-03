@@ -1,4 +1,6 @@
 ControleDeMedidas::Application.routes.draw do
+  resources :avisos
+
   resources :alimentacaos
 
   resources :atividades
