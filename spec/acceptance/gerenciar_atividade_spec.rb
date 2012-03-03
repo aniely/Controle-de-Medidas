@@ -41,6 +41,17 @@ feature 'gerenciar atividade' do
 
   end
 
+    scenario 'excluir atividade' do #, :javascript => true do
+
+    pessoa = FactoryGirl.create(:pessoa,:nome => 'Aniely')
+    atividade = FactoryGirl.create(:atividade, :pessoa => pessoa)
+    
+    visit atividades_path
+    click_link 'Excluir'
+
+  end
+
+
   def preencher_e_verificar_atividade
 
     fill_in 'Nomeat', :with => 'corrida'
