@@ -24,4 +24,31 @@ feature 'gerenciar dica' do
     page.should have_content 'Descricao: Praticar'
     page.should have_content 'Nome: Aniely'
   end
+
+
+    scenario 'alterar dica' do #, :javascript => true do
+
+    pessoa = FactoryGirl.create(:pessoa,:nome => 'Aniely')
+    aviso = FactoryGirl.create(:aviso, :pessoa => pessoa)
+
+    visit edit_aviso_path(aviso)
+
+    preencher_e_verificar_aviso
+end
+
+    def preencher_e_verificar_aviso
+
+   
+    fill_in 'Data', :with => '03/03/2012'
+    fill_in 'Descricao', :with => 'Praticar'
+    select  'Aniely', :on => 'Nome' 
+       
+    click_button 'Salvar'
+  
+  
+    page.should have_content 'Data: 03/03/2012'
+    page.should have_content 'Descricao: Praticar'
+    page.should have_content 'Nome: Aniely'
+  end
+
 end
